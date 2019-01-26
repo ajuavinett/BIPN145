@@ -1,2 +1,2 @@
 # BIPN145
-website &amp; code for BIPN 145 (neurobiology laboratory)
+Code for UCSD BIPN 145 (Neurobiology Laboratory)
