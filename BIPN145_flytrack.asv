@@ -252,18 +252,9 @@ end
 %% COMBINED PLOTS
 figure('Name','All fly velocities')
 hold on;
-    plot(all_velocity','LineWidth',2)
-    xlabel('Time (s)', 'fontsize', 11);
-    ylabel('Average velocity (mm/s)', 'fontsize', 11);    
-    if num_files == 2
-        legend({'Fly 1','Fly 2'})
-    elseif num_files == 3
-        legend({'Fly 1','Fly 2','Fly 3'})
-    elseif num_files == 4
-        legend({'Fly 1','Fly 2','Fly 3','Fly 4'})
-    elseif num_files == 4
-        legend({'Fly 1','Fly 2','Fly 3','Fly 4','Fly 5'})
-    end    
+
+    plot(all_velocity)
+    
 end
 
 %% WRITE VELOCITY DATA TO DISC
