@@ -1,4 +1,4 @@
-function BIPN145_flytrack(diameter)
+function BIPN145_flytrack(diameter,varargin)
 
 %% SCRIPT INFO
 % A short script to open an image and calculate the position of a fruit fly
@@ -10,6 +10,9 @@ function BIPN145_flytrack(diameter)
 
 %% INPUTS
 % diameter is diameter of dish in centimeters
+if  nargin == 0
+    diameter = 4; %default diameter
+end
 height = diameter;
 width = diameter;
 
