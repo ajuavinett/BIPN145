@@ -45,7 +45,11 @@ num_files = size(file_list,2);
 disp(strcat(num2str(num_files), ' files selected for analysis.'));
 
 for i = 1:num_files
-    vr = VideoReader([pathname,video_name{i}]);
+    if num_files == 1
+        vr = VideoReader([pathname,video_name]);
+    else
+        vr = VideoReader([pathname,video_name{i}]);
+    end
     resolution = [vr.Width vr.Height];
     nfrm_movie = floor(vr.Duration * vr.FrameRate) - 1;
     
