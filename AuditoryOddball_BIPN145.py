@@ -32,9 +32,9 @@ for n in range(num_beeps):
     print('trial #:',n)
     winsound.Beep(stim_array[0,n],duration)   
     if n in deviant_IDs:
-        ser.write(3) # two pulses for normal
+        ser.write(3) # three pulses for deviant
     else:
-        ser.write(1) # one pulse for deviant
+        ser.write(1) # one pulse for standard
     time.sleep(ITI)
 
         
