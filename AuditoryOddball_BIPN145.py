@@ -15,11 +15,11 @@ ser = serial.Serial('COM3')
 
 # EXPERIMENT VARIABLES
 ITI = 2 # intertrial interval, in s
-num_beeps = 50 # number of beeps
-duration = 500 # sound duration, in ms
+num_beeps = 100 # number of beeps
+duration = 300 # sound duration, in ms
 frequency = 1000 # main frequency, in Hz
 deviant = 500 # deviant frequency, in Hz
-deviant_ratio = 0.2 # ratio of deviant to normal frequencies
+deviant_ratio = 0.2 # ratio of deviant to normal frequencies. 0.2 = 20% deviant
 
 # CREATE THE STIMULUS ARRAY
 stim_array = np.full((1,num_beeps),1000)
