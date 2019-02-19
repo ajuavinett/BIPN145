@@ -1,6 +1,6 @@
 # IMPORT LIBRARIES
-from IPython import get_ipython
-get_ipython().magic('reset -sf')
+# from IPython import get_ipython
+# get_ipython().magic('reset -sf')
 import numpy as np
 import time
 import winsound
