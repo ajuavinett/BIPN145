@@ -1,6 +1,6 @@
+function plotOddball
 
 trial = {};
-deviant_IDs = [1,4,7,2,33];
 deviant_trials = [];
 standard_trials = [];
 
@@ -26,6 +26,8 @@ figure;
 plot(standard_mean)
 hold on
 plot(deviant_mean)
-xlabel('time')
+xlabel('time (seconds)')
 ylabel('voltage')
+xticklabels([0 .2 .4 .6 .8 1])
+legend({'standard','deviant'})
 
