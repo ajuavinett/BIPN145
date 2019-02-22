@@ -1,4 +1,4 @@
-function plotOddball
+function plotOddball(data,dataend,datastart)
 
 trial = {};
 deviant_trials = [];
@@ -22,6 +22,7 @@ deviant_mean = deviant_mean - deviant_mean(1);
 standard_mean = mean(standard_trials,'omitnan');
 standard_mean = standard_mean - standard_mean(1);
 
+% plot 
 figure;
 plot(standard_mean)
 hold on
