@@ -6,7 +6,7 @@ function plotLabChartSpectrumData(SpectrumData)
  
 % save the axis values
 frequency = SpectrumData(1,2:end);
-time = SpectrumData(3:end,1);
+time = round(SpectrumData(3:end,1),1);
 data = SpectrumData(3:end,2:end);
 
 % create your figure!
