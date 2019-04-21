@@ -1,7 +1,4 @@
-# Computer Lab #1 documentation <i>--under development</i>
-### This handout provides extra background information on the Allen Cell Types lesson plan.
-In the first part of the lesson, you'll interact with the Allen Institute website to compare different cell types. Then, you'll dive into the data yourself, to compare mouse and human cells.
-
+---
 docs_list_title: Documentation Contents
 docs:
 
@@ -10,6 +7,11 @@ docs:
 
 - title: Computing Basics
   url: computing_basics
+---
+
+# Computer Lab #1 documentation <i>--under development</i>
+### This handout provides extra background information on the Allen Cell Types lesson plan.
+In the first part of the lesson, you'll interact with the Allen Institute website to compare different cell types. Then, you'll dive into the data yourself, to compare mouse and human cells.
 
 ---
 
