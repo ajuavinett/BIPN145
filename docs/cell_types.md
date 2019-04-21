@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: "page"
 title: About the Allen Institute Cell Types Dataset
 permalink: /cell_types
 theme: jekyll-theme-cayman
