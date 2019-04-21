@@ -1,7 +1,31 @@
 # Computer Lab #1 documentation
-## This handout provides extra background information on the Allen Cell Types Jupyter Notebook.
+### This handout provides extra background information on the Allen Cell Types lesson plan.
+In the first part of the lesson, you'll interact with the Allen Institute website to compare different cell types. Then, you'll dive into the data yourself, to compare mouse and human cells.
+
 ---
-### Computing Basics
+
+## Information about Allen Institute Cell Types Dataset
+The dataset we'll be interacting with in this notebook was collected by the Allen Institute for Brain Science. I'd recommend watching this video so that you can see the people behind the data:
+
+[![Allen Institute Video](http://img.youtube.com/vi/1GWyjxzxqII/0.jpg)](https://www.youtube.com/watch?v=1GWyjxzxqII "Allen Cell Types Database: Understanding the fundamental building blocks of the brain")
+
+### Targeting different cell types
+How did the Allen actually distinguish between different cell types?
+
+### Whole-cell patch clamp
+
+### Characterizing the electrophysiology of cells
+You'll find many different metrics describing what happens when the Allen researchers stimulated and recorded from different cells. Let's breakdown what these properties are actually measuring.
+
+| Codename                | Full definition   
+| -------------           |------------------------------------|
+| vrest                   | resting membrane potential         |
+| upstroke-downstroke     | ratio of AP upstroke to downstroke |
+
+
+--- 
+
+## Computing Basics
 By using this Jupyter Notebook, you're encountering quite a few different elements of coding. Here are a few useful things to know.
 
 #### Software Development Kits
@@ -15,6 +39,3 @@ Jupyter Notebooks are great ways to collaborate on coding projects and learn how
 
 ---
 
-### Information about Allen Institute Cell Types Dataset
-
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/1GWyjxzxqII/0.jpg)](https://www.youtube.com/watch?v=1GWyjxzxqII"Allen Cell Types Database: Understanding the fundamental building blocks of the brain")
