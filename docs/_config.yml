@@ -1,12 +1,1 @@
-theme: jekyll-theme-cayman
-
----
-docs_list_title: Documentation
-docs:
-
-- title: Cell Types
-  url: cell_types
-
-- title: Computing Basics
-  url: computing_basics
----
+theme: jekyll-theme-caymann
