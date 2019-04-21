@@ -4,8 +4,8 @@ theme: jekyll-theme-cayman
 docs_list_title: Documentation
 docs:
 
-- title: Introduction
-  url: introduction.html
+- title: Cell Types
+  url: cell_types
 
 - title: Computing Basics
   url: computing_basics
