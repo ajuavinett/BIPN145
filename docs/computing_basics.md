@@ -1,5 +1,5 @@
 ---
-layout: "page"
+# layout: "page"
 title: Computing Basics
 permalink: /computing_basics
 ---
