@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: "page"
 title: Computing Basics
-permalink: /computingbasics
+permalink: /computing_basics
 ---
 
 this is how we compute
