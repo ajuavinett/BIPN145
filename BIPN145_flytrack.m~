@@ -261,14 +261,12 @@ for i = 1:num_files
     % legend(cleanLabels(file_list), 'location', 'NorthWest');
     
 end
-
 %% COMBINED PLOTS
-if num_flies > 1
-    figure('Name','All fly velocities')
-    hold on;
+figure('Name','All fly velocities')
+hold on;
     plot(all_velocity','LineWidth',2)
     xlabel('Time (s)', 'fontsize', 11);
-    ylabel('Average velocity (mm/s)', 'fontsize', 11);
+    ylabel('Average velocity (mm/s)', 'fontsize', 11);    
     if num_files == 2
         legend({'Fly 1','Fly 2'})
     elseif num_files == 3
@@ -277,7 +275,7 @@ if num_flies > 1
         legend({'Fly 1','Fly 2','Fly 3','Fly 4'})
     elseif num_files == 4
         legend({'Fly 1','Fly 2','Fly 3','Fly 4','Fly 5'})
-    end
+    end    
 end
 
 %% WRITE VELOCITY DATA TO DISC
