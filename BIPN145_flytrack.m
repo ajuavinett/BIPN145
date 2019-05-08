@@ -1,4 +1,4 @@
-function BIPN145_flytrack(diameter,varargin)
+function [mean_velocity, SEM_velocity] = BIPN145_flytrack(diameter,varargin)
 
 %% SCRIPT INFO
 % A short script to open an image and calculate the position of a fruit fly
@@ -263,7 +263,7 @@ for i = 1:num_files
 end
 
 %% COMBINED PLOTS
-if num_flies > 1
+if num_files > 1
     figure('Name','All fly velocities')
     hold on;
     plot(all_velocity','LineWidth',2)
@@ -279,6 +279,12 @@ if num_flies > 1
         legend({'Fly 1','Fly 2','Fly 3','Fly 4','Fly 5'})
     end
 end
+
+mean_velocity = mean(all_velocity,2);
+SEM_velocity = std(mean_velocity)/sqrt(num_files);
+
+disp(mean_velocity)
+disp(SEM_velocity)
 
 %% WRITE VELOCITY DATA TO DISC
 %
