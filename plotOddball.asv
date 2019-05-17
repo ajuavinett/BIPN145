@@ -1,9 +1,7 @@
-function plotOddball
+function plotOddball(data,dataend,datastart)
 % This script sorts exported oddball experiment data from LabChart into
 % deviant & standard trials and plots them.
 % A. Juavinett for BIPN 145
-
-uiopen('.mat')
 
 %% SET UP VARIABLES
 trial = {};
