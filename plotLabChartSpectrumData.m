@@ -19,7 +19,7 @@ set(get(power,'label'),'string','Power (V^2)');
 caxis([0,10^-11])
 
 % correct the time axis
-%xticks([0:length(time)/5:length(time)])
+% xticks([0:length(time)/5:length(time)])
 xticklabels(time(xticks))
 time_label = xlabel('time (seconds)');
 time_label.FontSize = 14;
