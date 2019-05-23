@@ -1,12 +1,13 @@
 function plotLabChartSpectrumData(SpectrumData)
 
-% first, go to "import data' to import your lab chart spectrum data.
-% after importing your data as a numerical matrix, you can use this script
-% if your file does not import as a variable "SpectrumData", rename it
+% This script plots the spectrogram .txt file exported from LabChart.
+% After importing your data as a numerical matrix, you can use this script
+% If your file does not import as a variable "SpectrumData", rename it in
+% the Workspace on the right.
  
 % save the axis values
 frequency = SpectrumData(1,2:end);
-time = SpectrumData(3:end,1);
+time = round(SpectrumData(3:end,1),1);
 data = SpectrumData(3:end,2:end);
 
 % create your figure!
