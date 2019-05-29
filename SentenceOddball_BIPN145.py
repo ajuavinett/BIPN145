@@ -7,10 +7,21 @@ import winsound
 import sys
 import serial
 import os
+import random
 
-# Move into the folder where the code & sound files are
+
+# STEP 1. CONVERT ALL FILES to 16-bit wave
+# https://audio.online-convert.com/convert-to-wav
+# Same sampling rate & audio channels.
+
+# STEP 2. MOVE ALL SOUND FILES into a new folder: Documents/BIPN145/SoundFiles
+
+# STEP 3. In the window at right, move into the folder where the code & sound files are
 #cd Documents
 #cd BIPN145
+#cd SoundFiles
+
+# STEP 4. CHANGE SOUND FILE NAMES BELOW FOR STANDARD & DEVIANT 1-5
 
 # ESTABLISH COMMUNICATION WITH ARDUINO
 # Talk to the Arduino. This COM port will depend on where your Arduino is plugged in.
@@ -35,12 +46,36 @@ stim_array[0,deviant_IDs] = deviant
 
 # PLAY THE STIMULI! (And tell LabChart when you do!)
 for n in range(num_beeps):
+    
     print('trial #:',n)
-    winsound.PlaySound("bake_hammers.wav",winsound.SND_ASYNC)
+          
+    winsound.PlaySound("bake_hammers_v3.wav",winsound.SND_ASYNC)
+    
     if n in deviant_IDs:
+        dev_stim = random.randint(1,5) # choose a random number from 1 to 5
+        if dev_stim == 1:
+            winsound.PlaySound("bake_hammers_v3.wav",winsound.SND_ASYNC) # DEVIANT 1
+            
+        if dev_stim == 2:
+            winsound.PlaySound("bake_hammers_v3.wav",winsound.SND_ASYNC) # DEVIANT 2
+            
+        if dev_stim == 3:
+            winsound.PlaySound("bake_hammers_v3.wav",winsound.SND_ASYNC) # DEVIANT 3
+            
+        if dev_stim == 4:
+            winsound.PlaySound("bake_hammers_v3.wav",winsound.SND_ASYNC) # DEVIANT 4
+            
+        if dev_stim == 5:
+            winsound.PlaySound("bake_hammers_v3.wav",winsound.SND_ASYNC) # DEVIANT 5
+        
         ser.write(3) # three pulses for deviant
+
     else:
+        winsound.PlaySound("bake_hammers_v3.wav",winsound.SND_ASYNC) # STANDARD
+        
         ser.write(1) # one pulse for standard
+
+
     time.sleep(ITI)
 
         
