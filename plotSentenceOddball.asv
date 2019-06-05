@@ -53,7 +53,7 @@ if ~ischar(filename) == 1
         hold on
         plot(deviant_mean)
         xlabel('time (seconds)')
-        ylabel('voltage (\mu V)')
+        ylabel('voltage (V)')
         xticklabels([0 .2 .4 .6 .8 1])
         legend({'standard','deviant'})
     end
@@ -110,11 +110,11 @@ else
     figure;
     % plot(standard_mean)
     hold on
-    shadedErrorBar(1:1195,mean(all_standard)',(std(all_standard)/sqrt(length(filename)))','lineprops','-b','patchSaturation',0.33) 
+    shadedErrorBar(1:4499,mean(standard_trials)',(std(standard_trials)/sqrt(length(filename)))','lineprops','-b','patchSaturation',0.33) 
     % plot(deviant_mean)
-    shadedErrorBar(1:1195,mean(all_deviant)',(std(all_deviant)/sqrt(length(filename)))','lineprops','-b','patchSaturation',0.33) 
+    shadedErrorBar(1:4499,mean(deviant_trials)',(std(deviant_trials)/sqrt(length(filename)))','lineprops','-r','patchSaturation',0.33)
     xlabel('time (ms)')
-    ylabel('voltage (\mu V)')
+    ylabel('voltage (V)')
     %xticklabels([0 .2 .4 .6 .8 1 1.2 1.4 1.6 1.8 2])
     legend({'standard','deviant'})
     xlim([0,4501])
