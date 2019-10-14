@@ -8,7 +8,7 @@ function plotSentenceOddball
 
 
 if ~ischar(filename) == 1
-
+    
     for iFile = 1:length(filename)
         display(['File: ',filename{iFile}])
         load(fullfile(pathname,filename{iFile}))
@@ -23,10 +23,12 @@ if ~ischar(filename) == 1
         %% GO THROUGH EACH TRIAL & SORT BY DEVIANT & STANDARD
         
         min_trial = min(dataend - datastart); % minimum length of a trial
+        dev_point = 1.4e04; % how many samples after is the dev_point
+        
         
         for iTrial = 1:length(dataend)
-            trial{iTrial} = data(datastart(iTrial):dataend(iTrial));
-            if dataend(iTrial)-datastart(iTrial) > 1200
+            trial{iTrial} = data(datastart(2,iTrial):dataend(2,iTrial));
+            if data(1,(datastart(1,iTrial)+dev_point)) > 5
                 deviant_trials(dev_trial,:) = trial{iTrial}(1:min_trial);
                 dev_trial = dev_trial + 1;
             else
@@ -58,7 +60,7 @@ if ~ischar(filename) == 1
         legend({'standard','deviant'})
     end
     
-    %% PLOT THE DATA
+    %% PLOT THE DATA ACROSS TRIALS
     figure;
     shadedErrorBar(1:1195,mean(all_standard)',(std(all_standard)/sqrt(length(filename)))','lineprops','-b','patchSaturation',0.33)
     hold on
@@ -69,8 +71,8 @@ if ~ischar(filename) == 1
     legend({'standard','deviant'})
     
     
-%% FOR SINGLE FILES (there is a more elegant way to do this; this is just for now)
-else 
+    %% FOR SINGLE FILES (there is a more elegant way to do this; this is just for now)
+else
     display(['File: ',filename])
     load(fullfile(pathname,filename))
     
@@ -88,10 +90,8 @@ else
     dev_point = 1.4e04; % how many samples after is the dev_point
     
     for iTrial = 1:length(dataend)
-        
         % plot(data(1,datastart(1,iTrial):dataend(1,iTrial)))
         % hold on
-  
         trial{iTrial} = data(datastart(2,iTrial):dataend(2,iTrial));
         if data(1,(datastart(1,iTrial)+dev_point)) > 5
             deviant_trials(dev_trial,:) = trial{iTrial}(1:min_trial);
@@ -105,7 +105,7 @@ else
     % AVERAGE trials
     deviant_mean = mean(deviant_trials,'omitnan');
     standard_mean = mean(standard_trials,'omitnan');
-
+    
     %% PLOT THE DATA
     figure;
     plot(standard_mean)
